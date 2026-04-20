@@ -63,35 +63,3 @@ object HttpsGithubComValrravnAthanorRefsHeadsMaster : GitVcsRoot({
     }
     param("pipelines.connectionId", "PROJECT_EXT_31")
 })
-
-
-object PipelinesWithDSL_Athanor : Pipeline({
-    id("Athanor")
-    name = "Athanor"
-
-    repositories {
-        repository(HttpsGithubComValrravnAthanorRefsHeadsMaster)
-    }
-
-    params {
-        param("foo", "bar")
-    }
-
-    triggers {
-        vcs {
-        }
-    }
-
-    job(PipelinesWithDSL_Athanor_Job1)
-})
-
-object PipelinesWithDSL_Athanor_Job1 : Job({
-    id("Job1")
-    name = "Job 1"
-
-    steps {
-        script {
-            scriptContent = """echo "Hello""""
-        }
-    }
-})
