@@ -83,4 +83,10 @@ object Athanor : Pipeline({
 object Athanor_Job1 : Job({
     id("Job1")
     name = "Job 1"
+    allowReuse = false
+
+    params {
+        param("foo", "bar")
+        param("param2", "value")
+    }
 })
