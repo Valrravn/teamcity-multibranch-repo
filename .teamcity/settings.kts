@@ -33,8 +33,6 @@ project {
     vcsRoot(HttpsGithubComValrravnAthanorRefsHeadsMaster)
 
     buildType(Build)
-
-    pipeline(PipelinesWithDSL_Athanor)
 }
 
 object Build : BuildType({
