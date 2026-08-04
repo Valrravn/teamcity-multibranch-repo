@@ -6,5 +6,9 @@ jobs:
         script-content: echo "Dev branch"
   Job2:
     name: Job 2
+    dependencies:
+      - Job1
   Job3:
     name: Job 3
+    dependencies:
+      - Job2
