@@ -4,3 +4,7 @@ jobs:
     steps:
       - type: script
         script-content: echo "Dev branch"
+  Job2:
+    name: Job 2
+  Job3:
+    name: Job 3
