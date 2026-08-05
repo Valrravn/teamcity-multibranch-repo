@@ -14,7 +14,11 @@ jobs:
     name: Job 2
     dependencies:
       - Job1
+    steps:
+      - type: script
+        script-content: error
   Job3:
     name: Job 3
     dependencies:
-      - Job2
+      - Job2:
+          ignore-upstream-failures: true
