@@ -4,6 +4,12 @@ jobs:
     steps:
       - type: script
         script-content: echo "Dev branch"
+      - type: script
+        script-content: touch output.txt
+    files-publication:
+      - path: touch.txt
+        share-with-jobs: true
+        publish-artifact: true
   Job2:
     name: Job 2
     dependencies:
