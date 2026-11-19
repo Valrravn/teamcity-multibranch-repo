@@ -21,4 +21,4 @@ jobs:
     name: Job 3
     dependencies:
       - Job2:
-          ignore-upstream-failures: true
+          ignore-upstream-failures true
