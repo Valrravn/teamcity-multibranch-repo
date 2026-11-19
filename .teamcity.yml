@@ -22,3 +22,11 @@ jobs:
     dependencies:
       - Job2:
           ignore-upstream-failures: true
+   share-with-jobs: true
+        publish-artifact: true
+  Job2:
+    name: Job 2
+    dependencies:
+      - Job1
+    steps:
+      - type: script
