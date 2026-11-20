@@ -15,7 +15,7 @@ jobs:
     dependencies:
       - Job1
     steps:
-      - type: script
+      - type script
         script-content: error
   Job3:
     name: Job 3
